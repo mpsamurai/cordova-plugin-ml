@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="coldova-plugin-ml" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>MachineLearning</name>
+    <js-module name="MachineLearning" src="www/MachineLearning.js">
+        <clobbers target="cordova.plugins.MachineLearning" />
+    </js-module>
+    
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="MachineLearning">
+                <param name="android-package" value="coldova-plugin-ml.MachineLearning" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml" />
+        <source-file src="src/android/MachineLearning.java" target-dir="src/coldova_plugin_ml/MachineLearning" />
+    </platform>
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="MachineLearning">
+                <param name="ios-package" value="MachineLearning" />
+            </feature>
+        </config-file>
+        <source-file src="src/ios/MachineLearning.m" />
+    </platform>
+</plugin>

@@ -12,6 +12,7 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
+        <lib-file src="src/android/libs/mlartifact.jar" />
         <source-file src="src/android/MachineLearning.java" target-dir="src/coldova_plugin_ml/MachineLearning" />
     </platform>
     

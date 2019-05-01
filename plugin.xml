@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="coldova-plugin-ml" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-ml" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>MachineLearning</name>
     <js-module name="MachineLearning" src="www/MachineLearning.js">
         <clobbers target="cordova.plugins.MachineLearning" />
@@ -8,12 +8,14 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="MachineLearning">
-                <param name="android-package" value="coldova-plugin-ml.MachineLearning" />
+                <param name="android-package" value="cordova-plugin-ml.MachineLearning" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml" />
-        <lib-file src="src/android/libs/mlartifact.jar" />
-        <source-file src="src/android/MachineLearning.java" target-dir="src/coldova_plugin_ml/MachineLearning" />
+        <lib-file src="src/android/libs/neochi.jar" />
+        <source-file src="src/android/MachineLearning.java" target-dir="src/cordova_plugin_ml/MachineLearning" />
+        <framework src="org.nd4j:nd4j-native-platform:1.0.0-beta3" />
+        <framework src="org.json:json:20180813"/>
     </platform>
     
     <platform name="ios">

@@ -1,0 +1,19 @@
+{
+  "name": "coldova-plugin-ml",
+  "version": "0.1.0",
+  "description": "",
+  "cordova": {
+    "id": "coldova-plugin-ml",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "ISC"
+}
